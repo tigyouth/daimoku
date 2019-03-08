@@ -1,2 +1,2 @@
 # daimoku
-This is the "Daimoku Bank" project.
+This is the "Daimoku Bank" repository.
