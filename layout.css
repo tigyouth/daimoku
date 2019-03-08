@@ -5,16 +5,10 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 20pt;
   font-weight: normal;
-  background: red;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(-90deg, red, yellow, blue);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(-90deg, red, yellow, blue);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(-90deg, red, yellow, blue);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(-90deg, red, yellow, blue);
-  /* Standard syntax */
+background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .main {
