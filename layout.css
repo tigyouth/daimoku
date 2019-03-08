@@ -4,15 +4,15 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 20pt;
   font-weight: normal;
-  background: red;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(-90deg, red, yellow, blue);
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(-90deg, red, yellow, blue);
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(-90deg, red, yellow, blue);
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(-90deg, red, yellow, blue);
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   /* Standard syntax */
 }
 
