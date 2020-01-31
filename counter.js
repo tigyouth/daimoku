@@ -10,5 +10,5 @@ button.onclick = function() {
 };
 
 function playSound () {
-    document.getElementById('clickme').play();
+    document.getElementById('play').play();
 }
