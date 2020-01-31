@@ -8,3 +8,7 @@ button.onclick = function() {
   button.innerHTML = "You Deposited: " + count + " min";
 
 };
+
+function playSound () {
+    document.getElementById('play').play();
+}
