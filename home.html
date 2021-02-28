@@ -17,12 +17,11 @@
     transition-duration: 0s;
   }
 
+
   .heart.is-active {
     transition-duration: 0.5s;
     background-position: -2800px 0;
   }
-
-
 
   .stage {
     position: fixed;
@@ -67,7 +66,7 @@
 
   <!--Push Button-->
   <div class="w3-container" align="center">
-    For each dialogue, click on the heart below one time
+    For each dialogue conducted, click on the heart below:
 <!--    <button class="w3-button w3-blue-grey" id="clickme" onclick="openClick()">Click Here</button>-->
     <div class="heart" id = "clickme" onclick="openclick()"></div>
     <button class="w3-button w3-blue-grey" id="display">Study Dialogues</button>
@@ -76,17 +75,6 @@
 
 
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-  <script>
-    $(function()
-    {
-    $(".heart").on("click", function()
-    {
-      $(this).toggleClass("is-active");
-     });
-    });
-  </script>
-
-
   <script>
   closeSidebar();
   function openSidebar() {
@@ -115,22 +103,25 @@
 
 
   var count = 0;
-  var button = document.getElementById('clickme');
+  var heart = document.getElementById('clickme');
   var display = document.getElementById('display');
 
 
-  button.onclick = function()
+  heart.onclick = function()
   {
     if (count==0)
     {
       count = count + 1;
       display.innerHTML = "You Entered: " + count + " New Dialogue";
+      heart.classList.toggle("is-active");
     }
 
     else
     {
      count = count + 1;
-     display.innerHTML = "You Entered: " + count + " New Dialogues";
+     real_count = parseInt(count/2 + 0.5);
+     display.innerHTML = "You Entered: " + real_count + " New Dialogues";
+     heart.classList.toggle("is-active");
      }
   };
 
