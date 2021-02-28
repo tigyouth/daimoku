@@ -1,37 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <title>TEST PAGE</title>
+  <title>NEWS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <style>
-  .heart {
-    width: 100px;
-    height: 100px;
-    background: url("heart.png") no-repeat;
-    background-position: 0 0;
-    cursor: pointer;
-    transition: background-position 1s steps(28);
-    transition-duration: 0s;
-  }
-
-  .heart.is-active {
-    transition-duration: 0.5s;
-    background-position: -2800px 0;
-  }
-
-
-
-  .stage {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-  </style>
 
 <body style="max-width:600px">
   <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
@@ -50,41 +23,14 @@
 
   <header class="w3-bar w3-card w3-theme">
     <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
-    <h1 class="w3-bar-item">TIG YOUTH</h1>
+    <h1 class="w3-bar-item">NEWS</h1>
   </header>
 
   <!--Start of main text-->
   <div class="w3-container">
   <hr>
-
   </div>
 
-  <!--Divider of main text-->
-  <footer class="w3-container w3-theme w3-margin-top">
-    <h3>DIALOGUE COUNTER</h3>
-  </footer>
-    <hr>
-
-  <!--Push Button-->
-  <div class="w3-container" align="center">
-    For each dialogue, click the heart one time
-<!--    <button class="w3-button w3-blue-grey" id="clickme" onclick="openClick()">Click Here</button>-->
-    <div class="heart" id = "clickme" onclick="openclick()"></div>
-    <button class="w3-button w3-blue-grey" id="display">Your Dialogues</button>
-  </div>
-
-
-
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-  <script>
-    $(function()
-    {
-    $(".heart").on("click", function()
-    {
-      $(this).toggleClass("is-active");
-     });
-    });
-  </script>
 
 
   <script>
@@ -112,29 +58,6 @@
   function openNews() {
     window.location="news.html";
   }
-
-
-  var count = 0;
-  var button = document.getElementById('clickme');
-  var display = document.getElementById('display');
-
-
-  button.onclick = function()
-  {
-    if (count==0)
-    {
-      count = count + 1;
-      display.innerHTML = "You Conducted: " + count + " New Dialogue";
-    }
-
-    else
-    {
-     count = count + 1;
-     display.innerHTML = "You Conducted: " + count + " New Dialogues";
-     }
-  };
-
-
   </script>
 
 </body>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <title>TEST PAGE</title>
+  <title>STUDY</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
@@ -15,8 +15,9 @@
       <img class="w3-circle" src="" alt="" style="width:75%">
     </div>
   </div>
-    <a class="w3-bar-item w3-button" href="#" onclick="openStudy()">Study Links</a>
-    <a class="w3-bar-item w3-button" href="#" onclick="openProgress()">Daimoku Progress</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="openHome()">Home</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="openStudy()">Study</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="openGuidance()">Daily Guidance</a>
     <a class="w3-bar-item w3-button" href="#" onclick="openNews()">News</a>
   </nav>
 
@@ -42,14 +43,21 @@
     document.getElementById("mySidebar").style.display = "none";
   }
 
-  function openProgress() {
-    window.location="study.html";
+  function openHome() {
+    window.location="home.html";
   }
 
    function openStudy() {
-    window.location="index.html";
+    window.location="study.html";
   }
 
+  function openGuidance() {
+    window.location="guidance.html";
+  }
+
+  function openNews() {
+    window.location="news.html";
+  }
   </script>
 
 </body>
