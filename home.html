@@ -6,6 +6,33 @@
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+  <style>
+  .heart {
+    width: 100px;
+    height: 100px;
+    background: url("heart.png") no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    transition: background-position 1s steps(28);
+    transition-duration: 0s;
+  }
+
+  .heart.is-active {
+    transition-duration: 0.5s;
+    background-position: -2800px 0;
+  }
+
+
+
+  .stage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  </style>
+
 <body style="max-width:600px">
   <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
   <div class="w3-container w3-theme-d2">
@@ -40,8 +67,25 @@
 
   <!--Push Button-->
   <div class="w3-container" align="center">
-    <button class="w3-button w3-blue-grey" id="clickme" onclick="openClick()">Click Here</button>
+    For each dialogue, click the heart one time
+<!--    <button class="w3-button w3-blue-grey" id="clickme" onclick="openClick()">Click Here</button>-->
+    <div class="heart" id = "clickme" onclick="openclick()"></div>
+    <button class="w3-button w3-blue-grey" id="display">Your Dialogues</button>
   </div>
+
+
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script>
+    $(function()
+    {
+    $(".heart").on("click", function()
+    {
+      $(this).toggleClass("is-active");
+     });
+    });
+  </script>
+
 
   <script>
   closeSidebar();
@@ -64,12 +108,22 @@
 
   var count = 0;
   var button = document.getElementById('clickme');
+  var display = document.getElementById('display');
 
 
-  button.onclick = function() {
+  button.onclick = function()
+  {
+    if (count==0)
+    {
+      count = count + 1;
+      display.innerHTML = "You Conducted: " + count + " New Dialogue";
+    }
 
-    count = count + 5;
-    button.innerHTML = "You Deposited: " + count + " min";
+    else
+    {
+     count = count + 1;
+     display.innerHTML = "You Conducted: " + count + " New Dialogues";
+     }
   };
 
 
